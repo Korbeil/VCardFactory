@@ -7,11 +7,12 @@
  */
 
     require_once __DIR__.'/VCardFactory.obj.php';
-    require_once __DIR__.'/VCardFactoryField.obj.php';
 
     date_default_timezone_set('Europe/Paris');
 
     // simple example with full features of the VCardFactory :)))
+
+    $time  = microtime(true);
 
     $vcard = new VCardFactory();
 
@@ -38,3 +39,5 @@
     $vcard->add(VCardFactoryField::setAddress('', 'Batiment ARPAE', 'Avenue de Jean-Monnet', 'La Rochelle', 'Poitou-Charente', '17000', 'France'));
 
     echo $vcard->build();
+
+    echo "\n\r"."Généré en ... " .(microtime(true) - $time). "s\r\n";

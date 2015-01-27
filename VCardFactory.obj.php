@@ -6,6 +6,8 @@
  * Time: 20:19
  */
 
+require_once __DIR__.'/VCardFactoryField.obj.php';
+
 class VCardFactory {
 
     protected $_fields;
